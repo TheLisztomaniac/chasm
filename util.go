@@ -11,7 +11,7 @@ const (
 	DropboxClientKey        = "6cjd40wz0bim84q"
 	DropboxClientSecret     = "vy1i9ulpgucrigp"
 	AmazonDriveClientKey    = "amzn1.application-oa2-client.3eeb67ec6ed24f018c990b9dea6dfe5a"
-	AmazonDriveClientSecret = "e9b9b8349c1c140b686a9f93298bd6d43f24a09c4acf30324157f1530f57baa1"
+	AmazonDriveClientSecret = ""
 )
 
 //MARK: Helper Functions
