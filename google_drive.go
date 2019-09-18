@@ -24,7 +24,6 @@ type GDriveStore struct {
 // Setup GDrive
 func (g *GDriveStore) Setup() bool {
 	config, err := getConfig()
-
 	if err != nil {
 		color.Red("Unable to parse client secret file to config: %v", err)
 		return false

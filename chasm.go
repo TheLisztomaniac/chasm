@@ -24,7 +24,6 @@ type CloudStore interface {
 	Restore() string
 
 	Description() string
-	ShortDescription() string
 
 	Clean()
 }
@@ -296,7 +295,6 @@ func Restore() {
 
 	// (2) next restore .chasm file
 	chasmFileBytes := restoreShareID(ShareID(chasmPrefFile), sharePaths)
-
 	var restoredPrefs ChasmPref
 	err := json.Unmarshal(chasmFileBytes, &restoredPrefs)
 	if err != nil {
@@ -306,7 +304,7 @@ func Restore() {
 
 	// (3) create necessary directories, update in prefs.
 	for dirPath, _ := range restoredPrefs.DirMap {
-		os.MkdirAll(dirPath, 0770)
+		os.MkdirAll(dirPath, 0777)
 		preferences.DirMap[dirPath] = true
 	}
 
@@ -322,7 +320,7 @@ func Restore() {
 			continue
 		}
 
-		err := ioutil.WriteFile(filePath, fileBytes, 0770)
+		err := ioutil.WriteFile(filePath, fileBytes, 0777)
 		if err != nil {
 			color.Red("Error writing restored file %s: %s", filePath, err)
 		}
@@ -335,6 +333,7 @@ func restoreShareID(sid ShareID, sharePaths []string) []byte {
 
 	sharesFound := 0
 	for i, sp := range sharePaths {
+
 		file := path.Join(sp, string(sid))
 		dataBytes, err := ioutil.ReadFile(file)
 		if err != nil {

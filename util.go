@@ -7,9 +7,11 @@ import (
 
 //MARK: Constants
 const (
-	GoogleDriveClientSecret = string(`{"installed":{"client_id":"713278088797-agohh4u0l5vjscrmn7j0b79i54mtlein.apps.googleusercontent.com","project_id":"peerless-tiger-129119","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://accounts.google.com/o/oauth2/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"wd3-G0rEx4VwuV9gwabi1kbj","redirect_uris":["urn:ietf:wg:oauth:2.0:oob","http://localhost"]}}`)
-	DropboxClientKey        = "zpy424sdnluk9c1"
-	DropboxClientSecret     = "rrmjsz7mlgnholq"
+	GoogleDriveClientSecret = string(`{"installed":{"client_id":"101907208653-aet8icjmf9ijkhu5398hf6srm2adni26.apps.googleusercontent.com","project_id":"tough-mechanic-231115","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_secret":"OwYXFaWqQjsAPwL36F1ZOlm2","redirect_uris":["urn:ietf:wg:oauth:2.0:oob","http://localhost"]}}`)
+	DropboxClientKey        = "6cjd40wz0bim84q"
+	DropboxClientSecret     = "vy1i9ulpgucrigp"
+	AmazonDriveClientKey    = "amzn1.application-oa2-client.3eeb67ec6ed24f018c990b9dea6dfe5a"
+	AmazonDriveClientSecret = "e9b9b8349c1c140b686a9f93298bd6d43f24a09c4acf30324157f1530f57baa1"
 )
 
 //MARK: Helper Functions
